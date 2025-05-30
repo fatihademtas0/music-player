@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Pixel Game</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="game-container">
+            <div id="player"></div>
+
+            <div id="rain-container">
+                <!-- 100 damla oluşturmak için -->
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <div class="raindrop"></div>
+                <!-- ... bunu çoğalt ya da JS ile üret -->
+            </div>
+
+            <div class="music-player">
+                <div class="cover">
+                    <img src="cover.jpg" alt="cover" />
+                </div>
+                <div class="info">
+                    <h3 id="song-title">Chill Vibes</h3>
+                </div>
+                <audio id="audio" src="song.mp3"></audio>
+                <div class="controls">
+                    <button id="prev">⏮️</button>
+                    <button id="play-pause">▶️</button>
+                    <button id="next">⏭️</button>
+                </div>
+                <div class="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
