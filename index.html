@@ -19,20 +19,38 @@
             </div>
 
             <div class="music-player">
-                <div class="cover">
-                    <img src="cover.jpg" alt="cover" />
+                <div class="cover-row">
+                    <img src="./images/kitten.png" class="cover-img" />
+                    <img src="./images/heart.png" class="cover-img" />
                 </div>
                 <div class="info">
-                    <h3 id="song-title">Chill Vibes</h3>
+                    <img src="./images/message.png" alt="" />
                 </div>
                 <audio id="audio" src="song.mp3"></audio>
-                <div class="controls">
-                    <button id="prev">⏮️</button>
-                    <button id="play-pause">▶️</button>
-                    <button id="next">⏭️</button>
-                </div>
-                <div class="progress-container">
+
+                <div class="progress-container" id="progress-container">
                     <div class="progress" id="progress"></div>
+                </div>
+
+                <div class="controls">
+                    <img
+                        src="./images/previous.png"
+                        id="prev"
+                        class="control-button"
+                        alt="Previous"
+                    />
+                    <img
+                        src="./images/play.png"
+                        id="play-pause"
+                        class="control-button"
+                        alt="Play/Pause"
+                    />
+                    <img
+                        src="./images/next.png"
+                        id="next"
+                        class="control-button"
+                        alt="Next"
+                    />
                 </div>
             </div>
         </div>

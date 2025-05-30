@@ -54,16 +54,23 @@ body {
 .music-player {
     position: absolute;
     bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    background: rgba(44, 44, 44, 0.9);
+    right: 30px;
+    width: 200px;
+    height: 300px;
+    background-image: url("./images/player-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 20px 30px 20px; /* alt boşluğu artırdık */
     box-shadow: 0 0 10px #000;
     text-align: center;
     color: #fff;
     z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* elemanları dikeyde aralıklı yay */
 }
 
 .music-player .cover img {
@@ -72,25 +79,54 @@ body {
     margin-bottom: 10px;
 }
 
-.controls button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 22px;
-    margin: 0 10px;
+.controls {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.cover-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cover-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.control-button {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.control-button:hover {
+    transform: scale(1.1);
 }
 
 .progress-container {
-    background: #555;
-    height: 6px;
-    border-radius: 3px;
-    margin-top: 15px;
     overflow: hidden;
+    margin-top: 20px;
+    background: #ffffff; /* arka plan rengi */
+    height: 10px; /* daha kalın */
+    border-radius: 10px;
+    overflow: hidden;
+}
+.info {
+    margin-bottom: 20px;
 }
 
 .progress {
-    background: #0ff;
+    background: rgb(77, 255, 0);
     height: 100%;
     width: 0%;
+    transition: width 0.3s ease-in-out;
+    background: linear-gradient(to right, #e91281, #be11e5); /* geçişli renk */
+    border-radius: 10px 0 0 10px; /* sadece sol kenar yuvarlak */
+    box-shadow: 0 0 5px rgb(255, 0, 149), 0 0 10px rgb(255, 0, 149);
 }
